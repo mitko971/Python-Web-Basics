@@ -20,6 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('FruitipediaApp.common.urls')),
-    path('', include('FruitipediaApp.account.urls')),
+    path('profile/', include('FruitipediaApp.account.urls')),
     path('', include('FruitipediaApp.fruits.urls')),
 ]
