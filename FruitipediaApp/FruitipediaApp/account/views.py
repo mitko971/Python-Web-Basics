@@ -14,7 +14,7 @@ from FruitipediaApp.account.models import AccountModel
 class CreateProfile(CreateView):
     template_name = 'profile/create-profile.html'
     form_class = CreateProfileForm
-    success_url = reverse_lazy('')
+    success_url = reverse_lazy('dashboard')
 
 
 class DetailsProfile(ListView):
