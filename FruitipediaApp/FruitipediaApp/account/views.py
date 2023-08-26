@@ -17,7 +17,7 @@ class CreateProfile(CreateView):
     success_url = reverse_lazy('dashboard')
 
 
-class DetailsProfile(ListView):
+class DetailsProfile(auth_views.TemplateView):
     template_name = 'profile/details-profile.html'
 
 
