@@ -32,3 +32,21 @@ class FruitForm(forms.ModelForm):
     class Meta:
         model = FruitModel
         fields = "__all__"
+
+
+class EditFruitForm(forms.ModelForm):
+    class Meta:
+        model = FruitModel
+        fields = "__all__"
+
+
+class DeleteFruitForm(forms.ModelForm):
+    class Meta:
+        model = FruitModel
+        fields = "__all__"
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        for field in self.fields.values():
+            field.widget.attrs['readonly'] = 'readonly'

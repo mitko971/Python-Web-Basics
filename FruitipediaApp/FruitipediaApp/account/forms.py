@@ -5,7 +5,7 @@ from FruitipediaApp.account.models import AccountModel
 
 class CreateProfileForm(forms.ModelForm):
     first_name = forms.CharField(
-        label= "",
+        label="",
         widget=forms.TextInput(
             attrs={'placeholder': 'First Name'}
         )
@@ -33,3 +33,8 @@ class CreateProfileForm(forms.ModelForm):
         model = AccountModel
         fields = ('first_name', 'last_name', 'email', 'password')
 
+
+class EditProfileForm(forms.ModelForm):
+    class Meta:
+        model = AccountModel
+        fields = ('first_name', 'last_name', 'image', 'age')

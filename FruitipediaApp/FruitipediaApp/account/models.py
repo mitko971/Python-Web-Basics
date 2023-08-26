@@ -35,7 +35,7 @@ class AccountModel(models.Model):
         null=False,
         blank=False,
         validators=(
-            MinLengthValidator(8,),
+            MinLengthValidator(8, ),
         )
     )
     image = models.ImageField(
@@ -47,3 +47,6 @@ class AccountModel(models.Model):
         null=True,
         default=18,
     )
+
+    def get_full_name(self):
+        return self.first_name + " " + self.last_name
