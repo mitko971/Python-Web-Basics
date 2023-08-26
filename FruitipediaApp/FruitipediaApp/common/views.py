@@ -24,5 +24,6 @@ class DashboardView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['fruits'] = FruitModel.objects.all()
+        context['profile'] = AccountModel.objects.all()
 
         return context
